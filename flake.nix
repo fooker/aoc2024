@@ -8,6 +8,7 @@
     
     mypyenv = pkgs.python3.withPackages (ps: with ps; [
       pytest
+      numpy
     ]);
 
   in {
