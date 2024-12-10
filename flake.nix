@@ -6,14 +6,14 @@
   outputs = { nixpkgs, flake-utils, ... }: flake-utils.lib.eachDefaultSystem (system: let
     pkgs = nixpkgs.legacyPackages.${system};
     
-    mypyenv = pkgs.python3.withPackages (ps: with ps; [
+    mypyenv = pkgs.python312.withPackages (ps: with ps; [
       pytest
       numpy
     ]);
 
   in {
     devShell = pkgs.mkShell {
-      packages = with pkgs; [
+      packages = [
         mypyenv
         pkgs.bash
         pkgs.gitAndTools.git
