@@ -9,6 +9,7 @@
     mypyenv = pkgs.python312.withPackages (ps: with ps; [
       pytest
       numpy
+      sympy
     ]);
 
   in {
