@@ -10,6 +10,8 @@
       pytest
       numpy
       sympy
+      scipy
+      networkx
     ]);
 
   in {
